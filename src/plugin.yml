@@ -1,0 +1,8 @@
+name: Dice
+main: plugin.nextlife.dice.Main
+version: 0.1
+api-version: 1.12.2
+commands:
+  Dice:
+    description: 주사위 돌리는 명령어
+    usage: /Dice
