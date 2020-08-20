@@ -15,12 +15,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Arrays;
 
-public class Dice extends DICE_EVENT implements CommandExecutor {
+public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
     protected static Inventory inv;
-    protected static int RandomNumber = 0;
+    protected int RandomNumber = 0;
 
-    public static void init() {
-        inv.setItem(4, createItem(Material.STONE, "Dice roll", "주사위 숫자는 "+ RandomNumber));
+    public void init() {
+        inv.setItem(4, createItem(Material.STONE, "Dice roll", "주사위 숫자는 " + this.RandomNumber));
     }
 
     private static ItemStack createItem(Material material, String ItemName, String lore) {
@@ -48,8 +48,22 @@ public class Dice extends DICE_EVENT implements CommandExecutor {
         return true;
     }
 
+    // EVENT
+    @EventHandler
+    public void onInventoryClick(InventoryClickEvent event) {
+        if (Dice.inv.getTitle().equals("DICE GUI")) {
+            Player player = (Player) event.getWhoClicked();
+            if (event.getCurrentItem().getType() == Material.STONE) {
+                player.closeInventory();
+                this.RandomNumber = (int) (Math.random() * 9 + 1);
+                init();
+                player.openInventory(Dice.inv);
+            }
+        }
+    }
 }
 
+/*
 class DICE_EVENT implements Listener {
     @EventHandler
     public static void onInventoryClick(InventoryClickEvent event) {
@@ -57,10 +71,11 @@ class DICE_EVENT implements Listener {
             Player player = (Player) event.getWhoClicked();
             if (event.getCurrentItem().getType() == Material.STONE) {
                 player.closeInventory();
-                Dice.RandomNumber = (int) (Math.random() * 9) + 1;
+                setRandomNumber((int) (Math.random() * 9 + 1));
                 Dice.init();
                 player.openInventory(Dice.inv);
             }
         }
     }
 }
+*/
