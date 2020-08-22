@@ -32,3 +32,11 @@ on inventory click:
 #   like this: loop {Var::*}:, 
 #   like this: loop blocks in radius 1 around player: 
 #   and in many other ways.
+
+#how to can switch: case'':
+#Can not use switch statements
+#instead, just use if statements.
+#I know it's cumbersome, but yeah Skript doesn't like all that Java stuff
+
+#Can you 'else if' ?
+#you can use if/else if and else like normal, It's even recommended if possible!
