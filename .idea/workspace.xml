@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Dice:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="87a25b1f-3ec6-4691-aad5-aaa95aea2531" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1g5uuG94XQRm2VNnhKFWj4cPq0s" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ham Seungwoo\Desktop\Github\주사위" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87a25b1f-3ec6-4691-aad5-aaa95aea2531" name="Default Changelist" comment="" />
+      <created>1597416994695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597416994695</updated>
+      <workItem from="1597416999858" duration="1112000" />
+      <workItem from="1597472226268" duration="2768000" />
+      <workItem from="1597860799083" duration="6942000" />
+      <workItem from="1597867830350" duration="1270000" />
+      <workItem from="1597894758474" duration="8063000" />
+      <workItem from="1597917850082" duration="671000" />
+      <workItem from="1597927165148" duration="2561000" />
+      <workItem from="1597930237302" duration="88000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="759" y="283" key="#com.intellij.ide.util.MemberChooser" timestamp="1597902685794">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="759" y="283" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597902685794" />
+    <state x="754" y="207" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1597864092320">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="754" y="207" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597864092320" />
+    <state x="639" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1597860811290">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="639" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597860811290" />
+    <state x="689" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597902613868">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="689" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597902613868" />
+    <state x="652" y="318" key="FileChooserDialogImpl" timestamp="1597864090440">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="652" y="318" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597864090440" />
+    <state x="404" y="153" key="SettingsEditor" timestamp="1597864875142">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="404" y="153" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597864875142" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1597860921552">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597860921552" />
+    <state x="134" y="104" key="new project wizard" timestamp="1597417018078">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="134" y="104" key="new project wizard/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597417018078" />
+    <state x="751" y="267" key="refactoring.ChangeSignatureDialog" timestamp="1597903078008">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="751" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597903078008" />
+    <state x="623" y="227" key="search.everywhere.popup" timestamp="1597902584727">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597902584727" />
+  </component>
+</project>
