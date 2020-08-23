@@ -19,7 +19,7 @@ command /돌리기:
 on inventory click:
     if inventory name of player's current inventory contains "주사위":
         if clicked slot is 13:
-#            if name of stone = "주사위 돌리기":
+#            if uncolored name of player's tool is "주사위 돌리기":
             close player's inventory
             command "/돌리기"
             wait 1 tick
