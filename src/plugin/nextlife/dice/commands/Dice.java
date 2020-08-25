@@ -12,12 +12,10 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import plugin.nextlife.dice.Main;
 
 import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
+public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener {
     protected static Inventory inv;
     protected int RandomNumber = 0;
 
@@ -25,7 +23,7 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
         inv.setItem(4, createItem(Material.STONE, "Dice roll", "주사위 숫자는 " + this.RandomNumber));
     }
 
-    private static ItemStack createItem(Material material, String ItemName, String lore) {
+    private static ItemStack  createItem(Material material, String ItemName, String lore){
         final ItemStack item = new ItemStack(material, 1);
         final ItemMeta meta = item.getItemMeta();
 
@@ -54,38 +52,25 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
     // EVENT
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (Dice.inv.getTitle().equals("DICE GUI")) {
-            Player player = (Player) event.getWhoClicked();
-            if (event.getCurrentItem().getType() == Material.STONE) {
-                player.closeInventory();
-                this.RandomNumber = (int) (Math.random() * 9 + 1);
-                player.openInventory(Dice.inv);
-                AtomicInteger Count = new AtomicInteger();
-                for(int i = 0; i < 10; i++) {
-                    Bukkit.getScheduler().runTaskLater(new Main(), () -> {
-                        Count.set((int) (Math.random() * 16));
-                        inv.setItem(4, createItem(35, "Rolling", "" + Count));
-                    }, 5L);
+        if (event.getCurrentItem().getItemMeta() ==  null) {
+            return;
+        }
+        if (event.getInventory().getTitle().equalsIgnoreCase("DICE GUI")/*Dice.inv.getTitle().equals("DICE GUI")*/) {
+            final Player player = (Player) event.getWhoClicked();
+                if ("Dice roll".equals(event.getCurrentItem().getItemMeta().getDisplayName())) {
+                    player.closeInventory();
+                    this.RandomNumber = (int) (Math.random() * 9 + 1);
+//                    for(int i = 0; i < 13; i++) {
+//                        Bukkit.getScheduler().runTaskLater(new Main(), () -> {
+//                            int Count = (int) (Math.random() * 9) + 1;
+//                            inv.setItem(4, createItem(Material.getMaterial("35:" + Count), "Dice rolling", "" + Count));
+//                        }, 3L);
+//                    }
+                    player.openInventory(Dice.inv);
+                    init();
                 }
-                init();
-            }
+        } else {
+            System.out.println("DICE GUI 가 아닙니다.");
         }
     }
 }
-
-/*
-class DICE_EVENT implements Listener {
-    @EventHandler
-    public static void onInventoryClick(InventoryClickEvent event) {
-        if (Dice.inv.getTitle().equals("DICE GUI")) {
-            Player player = (Player) event.getWhoClicked();
-            if (event.getCurrentItem().getType() == Material.STONE) {
-                player.closeInventory();
-                setRandomNumber((int) (Math.random() * 9 + 1));
-                Dice.init();
-                player.openInventory(Dice.inv);
-            }
-        }
-    }
-}
-*/

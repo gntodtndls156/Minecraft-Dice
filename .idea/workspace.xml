@@ -8,20 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="87a25b1f-3ec6-4691-aad5-aaa95aea2531" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Skript/주사위.sk" beforeDir="false" afterPath="$PROJECT_DIR$/Skript/주사위.sk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/.idea/artifacts/Dice_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/Dice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/out/production/Dice/META-INF/Dice.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/out/production/Dice/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/out/production/Dice/plugin/nextlife/dice/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/out/production/Dice/plugin/nextlife/dice/commands/Dice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/src/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/src/plugin/nextlife/dice/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin/src/plugin/nextlife/dice/commands/Dice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dice/META-INF/Dice.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/commands/Dice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/commands/Dice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin/nextlife/dice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin/nextlife/dice/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +42,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -79,6 +70,9 @@
       <workItem from="1597930237302" duration="88000" />
       <workItem from="1598155535432" duration="44000" />
       <workItem from="1598155622637" duration="3545000" />
+      <workItem from="1598192789618" duration="1731000" />
+      <workItem from="1598292120277" duration="5917000" />
+      <workItem from="1598324527872" duration="3295000" />
     </task>
     <servers />
   </component>
@@ -102,14 +96,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="689" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597902613868" />
-    <state x="652" y="318" key="FileChooserDialogImpl" timestamp="1597864090440">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2572" y="327" key="FileChooserDialogImpl" timestamp="1598292252236">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="652" y="318" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597864090440" />
-    <state x="404" y="153" key="SettingsEditor" timestamp="1597864875142">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="2572" y="327" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598292252236" />
+    <state x="2324" y="157" key="SettingsEditor" timestamp="1598292255264">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="404" y="153" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597864875142" />
+    <state x="2324" y="157" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598292255264" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1597860921552">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -118,11 +114,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="134" y="104" key="new project wizard/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597417018078" />
-    <state x="2671" y="275" key="refactoring.ChangeSignatureDialog" timestamp="1598160966628">
+    <state x="2595" y="382" width="841" height="540" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1598292253413">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2595" y="382" width="841" height="540" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598292253413" />
+    <state x="2671" y="275" key="refactoring.ChangeSignatureDialog" timestamp="1598297878951">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="751" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@0.0.1920.1050" timestamp="1597903078008" />
-    <state x="2671" y="275" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598160966628" />
+    <state x="2671" y="275" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598297878951" />
     <state x="623" y="227" key="search.everywhere.popup" timestamp="1597902584727">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
