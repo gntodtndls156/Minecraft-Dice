@@ -1,6 +1,7 @@
 package plugin.nextlife.dice.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,6 +13,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.material.Wool;
 
 import java.util.Arrays;
 
@@ -51,14 +53,28 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
     // EVENT
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (Dice.inv.getTitle().equals("DICE GUI")) {
-            Player player = (Player) event.getWhoClicked();
-            if (event.getCurrentItem().getType() == Material.STONE) {
-                player.closeInventory();
-                this.RandomNumber = (int) (Math.random() * 9 + 1);
-                init();
-                player.openInventory(Dice.inv);
+        if (event.getCurrentItem().getItemMeta() == null) {
+            return;
+        }
+        if (event.getInventory().getTitle().equals("DICE GUI")) {
+            if (event.getCurrentItem().getItemMeta().hasDisplayName()) {
+                Player player = (Player) event.getWhoClicked();
+                if (event.getCurrentItem().getItemMeta().getDisplayName().equals("Dice roll")){
+                    player.closeInventory();
+                    this.RandomNumber = (int) (Math.random() * 9 + 1);
+                    init();
+                    player.openInventory(Dice.inv);
+                    int Count;
+                    for(int i = 0; i < 5; i++) {
+                        //Count = (int)(Math.random() * 4);
+                        
+                    }
+                } else{
+                    System.out.println("Dice roll이 아닙니다.");
+                }
             }
+        } else {
+            System.out.println("DICE GUI가 아닙니다");
         }
     }
 }
