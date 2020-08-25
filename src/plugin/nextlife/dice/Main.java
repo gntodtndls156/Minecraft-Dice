@@ -1,5 +1,7 @@
 package plugin.nextlife.dice;
 
+import org.bukkit.Bukkit;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.java.JavaPlugin;
 import plugin.nextlife.dice.commands.Dice;
 
