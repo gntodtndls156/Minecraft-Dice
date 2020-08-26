@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db11728c-265d-42b1-a8bb-e15bce719ac4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/commands/Dice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Dice/plugin/nextlife/dice/commands/Dice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin/nextlife/dice/commands/Dice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +40,8 @@
       <updated>1598349173983</updated>
       <workItem from="1598349178449" duration="3145000" />
       <workItem from="1598364969251" duration="9000" />
+      <workItem from="1598407360728" duration="1537000" />
+      <workItem from="1598435295741" duration="5504000" />
     </task>
     <servers />
   </component>

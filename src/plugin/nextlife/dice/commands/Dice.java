@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,10 +15,11 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.Wool;
+import plugin.nextlife.dice.Main;
 
 import java.util.Arrays;
 
-public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
+public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener {
     protected static Inventory inv;
     protected int RandomNumber = 0;
 
@@ -37,6 +39,17 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
         return item;
     }
 
+    private static ItemStack createItem(ItemStack itemStack, String ItemName, String lore) {
+        final ItemStack item = new ItemStack(itemStack);
+        final ItemMeta meta = item.getItemMeta();
+
+        meta.setDisplayName(ItemName);
+        meta.setLore(Arrays.asList(lore));
+
+        item.setItemMeta(meta);
+        return item;
+    }
+
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if (commandSender instanceof Player) {
@@ -48,6 +61,13 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
             System.out.println("You are not a player.");
         }
         return true;
+    }
+
+    public ItemStack WoolColors(int number) {
+        // DyeColor Colors[] = new DyeColor[16];
+        DyeColor[] Colors = DyeColor.values();
+        Wool wool = new Wool(Colors[number]);
+        return wool.toItemStack(1);
     }
 
     // EVENT
@@ -62,13 +82,13 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener{
                 if (event.getCurrentItem().getItemMeta().getDisplayName().equals("Dice roll")){
                     player.closeInventory();
                     this.RandomNumber = (int) (Math.random() * 9 + 1);
-                    init();
-                    player.openInventory(Dice.inv);
                     int Count;
+                    player.openInventory(Dice.inv);
                     for(int i = 0; i < 5; i++) {
-                        //Count = (int)(Math.random() * 4);
-                        
+                        Count = (int)(Math.random() * 4);
+                        inv.setItem(3, createItem(WoolColors(Count), "Dice rolling", "주사위 숫자는 " + Count));
                     }
+                    init();
                 } else{
                     System.out.println("Dice roll이 아닙니다.");
                 }
