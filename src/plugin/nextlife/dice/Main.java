@@ -17,11 +17,11 @@ public class Main extends JavaPlugin {
 
         Commands();
 
-        getServer().getPluginManager().registerEvents(new Dice(), this);
+        getServer().getPluginManager().registerEvents(new Dice(this), this);
         System.out.println("command /Dice 시작합니다.");
     }
     private void Commands() {
-        this.getCommand("Dice").setExecutor(new Dice());
+        this.getCommand("Dice").setExecutor(new Dice(this));
     }
 
 }

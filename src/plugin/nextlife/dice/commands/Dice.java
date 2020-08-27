@@ -6,7 +6,6 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -70,6 +69,12 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener 
         return wool.toItemStack(1);
     }
 
+    // get Main instance
+    public Main main;
+    public Dice(Main main) {
+        this.main = main;
+    }
+
     // EVENT
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
@@ -82,13 +87,21 @@ public class Dice /* extends DICE_EVENT */ implements CommandExecutor, Listener 
                 if (event.getCurrentItem().getItemMeta().getDisplayName().equals("Dice roll")){
                     player.closeInventory();
                     this.RandomNumber = (int) (Math.random() * 9 + 1);
-                    int Count;
+                    int i;
                     player.openInventory(Dice.inv);
-                    for(int i = 0; i < 5; i++) {
-                        Count = (int)(Math.random() * 4);
-                        inv.setItem(3, createItem(WoolColors(Count), "Dice rolling", "주사위 숫자는 " + Count));
+                    for(i = 0; i <= 6; i++) {
+                        int finalI = i;
+                        Bukkit.getScheduler().runTaskLater(this.main, () -> {
+                            if (finalI == 6) {
+                                init();
+                            } else {
+                                int Count = (int) (Math.random() * 9) + 1;
+                                inv.setItem(4, createItem(WoolColors(Count - 1), "Dice rolling", "Dice's number is " + Count));
+                            }
+                        }, 10L * i);
+                        // Count = (int)(Math.random() * 4);
+                        // inv.setItem(3, createItem(WoolColors(Count), "Dice rolling", "주사위 숫자는 " + Count));
                     }
-                    init();
                 } else{
                     System.out.println("Dice roll이 아닙니다.");
                 }
