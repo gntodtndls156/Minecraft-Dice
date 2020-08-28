@@ -1,6 +1,6 @@
 # 스크립트 로드시
 On skript load:
-    set {randomCount} to 1
+    set {_randomCount} to 1
     
 # 명령어 추가
 command /주사위:
@@ -12,7 +12,7 @@ command /주사위:
 
 command /돌리기:
     trigger:
-        set {randomCount} to a random integer between 1 and 9
+        set {_randomCount} to a random integer between 1 and 9
         wait 1 tick
 
 # 인벤토리 클릭
@@ -47,7 +47,7 @@ on inventory click:
                 else if {_Count} is 10:
                     set slot 13 of current inventory of player to green wool named "주사위 돌리는 중" with lore "%{_Count}%"
                 wait 3 tick
-            set slot 13 of current inventory of player to stone named "주사위 돌리기" with lore "%{randomCount}%"
+            set slot 13 of current inventory of player to stone named "주사위 돌리기" with lore "%{_randomCount}%"
             wait 1 tick
 
 #You can use it like this: 
